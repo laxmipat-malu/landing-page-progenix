@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="'icon" type="image/png" href="progenx ai icon.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progenix.ai | Enterprise Agentic Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(148, 163, 184, 0.1); }
+        .glass-panel-hover:hover { border-color: rgba(56, 189, 248, 0.5); box-shadow: 0 0 15px rgba(56, 189, 248, 0.2); }
+        .gradient-text { background: linear-gradient(135deg, #3b82f6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .chart-container { position: relative; width: 100%; max-width: 100%; margin: 0 auto; }
+        .flow-arrow { font-size: 24px; color: #94a3b8; display: flex; align-items: center; justify-content: center; }
+        .metric-card { transition: transform 0.3s ease; }
+        .metric-card:hover { transform: translateY(-5px); }
+        /* Style for the embedded Guide content */
+        .guide-content h2 { font-size: 1.875rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #3b82f6; border-bottom: 2px solid #334155; padding-bottom: 0.5rem; }
+        .guide-content h3 { font-size: 1.5rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #06b6d4; }
+        .guide-content p { color: #cbd5e1; margin-bottom: 1rem; }
+        .guide-content code { background-color: #334155; padding: 2px 4px; border-radius: 3px; font-size: 0.9em; color: #ec4899; }
+        .guide-content table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.875rem; }
+        .guide-content th, .guide-content td { border: 1px solid #334155; padding: 0.75rem; text-align: left; }
+        .guide-content th { background-color: #1e293b; font-weight: 600; color: #f8fafc; }
+        
+        /* Button Animations */
+        .btn-launch { transition: all 0.3s ease; }
+        .btn-launch:hover { transform: translateY(-2px); }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyan-500 selection:text-white">
+
+    <header class="w-full py-12 px-4 sm:px-6 lg:px-8 bg-slate-900 border-b border-slate-800 relative overflow-hidden">
+        <!-- Background decorative glow -->
+        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full overflow-hidden opacity-20 pointer-events-none">
+            <div class="absolute -top-24 left-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl"></div>
+            <div class="absolute top-12 right-1/4 w-64 h-64 bg-cyan-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
+                PROGENIX<span class="text-cyan-400">.AI</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto">
+                The Operating System for <span class="text-white font-semibold">Autonomous Enterprise Agents</span>.
+                <br>
+                <span class="text-sm uppercase tracking-widest text-blue-500 mt-2 block">Secure. Scalable. Auditable.</span>
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+
+        <!-- ********************************************** -->
+        <!-- ******* NEW: LIVE DEMO GATEWAY *************** -->
+        <!-- ********************************************** -->
+        
+        <section class="relative -mt-20 mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                
+                <!-- CARD 1: MVP STUDIO -->
+                <a href="https://mvp.progenix-ai.live" target="_blank" class="group block">
+                    <div class="glass-panel glass-panel-hover p-8 rounded-2xl flex flex-col items-center text-center h-full transition-all duration-300 bg-slate-800/50 hover:bg-slate-800/80 cursor-pointer border-t-4 border-blue-500">
+                        <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white mb-2">Launch MVP Studio</h2>
+                        <p class="text-slate-400 mb-6 text-sm">Build, Configure, and Deploy secure agents using the No-Code Golden Path. Experience the workflow firsthand.</p>
+                        <span class="btn-launch inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-500/30">
+                            Enter Studio &rarr;
+                        </span>
+                    </div>
+                </a>
+
+                <!-- CARD 2: RUNTIME DASHBOARD -->
+                <a href="https://dashboard.progenix-ai.live" target="_blank" class="group block">
+                    <div class="glass-panel glass-panel-hover p-8 rounded-2xl flex flex-col items-center text-center h-full transition-all duration-300 bg-slate-800/50 hover:bg-slate-800/80 cursor-pointer border-t-4 border-cyan-500">
+                        <div class="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-cyan-500/30 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white mb-2">View Live Dashboard</h2>
+                        <p class="text-slate-400 mb-6 text-sm">Audit active agents, visualize traces, and monitor real-time FinOps metrics in the command center.</p>
+                        <span class="btn-launch inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-slate-900 bg-cyan-400 hover:bg-cyan-300 shadow-lg shadow-cyan-500/30">
+                            Open Dashboard &rarr;
+                        </span>
+                    </div>
+                </a>
+
+            </div>
+            <p class="text-center text-slate-500 text-xs mt-6 uppercase tracking-wide">Secure • Interactive • Live Environments</p>
+        </section>
+
+        <!-- ********************************************** -->
+        <!-- ********* 1. INFOGRAPHIC VISUALS CORE ********** -->
+        <!-- ********************************************** -->
+
+        <section>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-500 pl-4">The Enterprise AI Gap</h2>
+                    <p class="text-slate-300 mb-4 text-lg leading-relaxed">
+                        Enterprises want to deploy autonomous agents, but they face a "Black Box" problem. 
+                        LLMs are non-deterministic, making them risky for business processes.
+                    </p>
+                    <p class="text-slate-300 mb-6 text-lg leading-relaxed">
+                        Progenix.ai solves the trilemma of <strong>Control</strong>, <strong>Cost</strong>, and <strong>Complexity</strong> by treating agents as managed Kubernetes workloads, not just prompts.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-slate-800 p-4 rounded-lg border-l-2 border-pink-500">
+                            <div class="text-2xl font-bold text-white">85%</div>
+                            <div class="text-sm text-slate-400">Projects Stalled due to Governance</div>
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-lg border-l-2 border-cyan-500">
+                            <div class="text-2xl font-bold text-white">3x</div>
+                            <div class="text-sm text-slate-400">Cost Reduction via SQL Optimization</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-panel rounded-xl p-6 shadow-2xl">
+                    <div class="chart-container h-80">
+                        <canvas id="problemChart"></canvas>
+                    </div>
+                    <p class="text-center text-xs text-slate-500 mt-4">Figure 1: The Friction of Enterprise Agent Adoption</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">The Progenix Architecture</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">
+                    A Zero-Trust, Cloud-Native stack built on open-source giants: Kubernetes, Istio, and OPA.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="glass-panel p-6 rounded-xl border-t-4 border-blue-500 flex flex-col relative overflow-hidden">
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">1. Control Plane</h3>
+                    <p class="text-sm text-slate-400 mb-6">Governance & Automation</p>
+                    <div class="space-y-3 z-10">
+                        <div class="bg-slate-800 p-3 rounded border border-slate-700 flex justify-between items-center">
+                            <span>No-Code Studio</span>
+                            <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded">UI</span>
+                        </div>
+                        <div class="bg-slate-800 p-3 rounded border border-slate-700 flex justify-between items-center">
+                            <span>Blueprint Gen</span>
+                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">IaC</span>
+                        </div>
+                        <div class="bg-slate-800 p-3 rounded border border-slate-700 flex justify-between items-center">
+                            <span>ArgoCD</span>
+                            <span class="text-xs bg-green-900 text-green-200 px-2 py-1 rounded">GitOps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 rounded-xl border-t-4 border-cyan-500 flex flex-col relative">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2">2. Agent Plane</h3>
+                    <p class="text-sm text-slate-400 mb-6">Intelligence & Logic</p>
+                    <div class="space-y-3 z-10">
+                        <div class="bg-slate-800 p-3 rounded border border-slate-700 flex justify-between items-center">
+                            <span>Agent Service</span>
+                            <span class="text-xs bg-cyan-900 text-cyan-200 px-2 py-1 rounded">Pod</span>
+                        </div>
+                        <div class="bg-slate-800 p-3 rounded border border-slate-700 flex justify-between items-center">
+                            <span>Vector DB</span>
+                            <span class="text-xs bg-yellow-900 text-yellow-200 px-2 py-1 rounded">RAG</span>
+                        </div>
+                        <div class="bg-slate-800 p-3 rounded border border-slate-700 flex justify-between items-center">
+                            <span>Argo Workflows</span>
+                            <span class="text-xs bg-orange-900 text-orange-200 px-2 py-1 rounded">Logic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 rounded-xl border-t-4 border-pink-500 flex flex-col relative">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">3. Security Plane</h3>
+                    <p class="text-sm text-slate-400 mb-6">Zero Trust Enforcement</p>
+                    <div class="space-y-3 z-10">
+                        <div class="bg-slate-800 p-3 rounded border border-slate-700 flex justify-between items-center">
+                            <span>Istio Mesh</span>
+                            <span class="text-xs bg-pink-900 text-pink-200 px-2 py-1 rounded">mTLS</span>
+                        </div>
+                        <div class="bg-slate-800 p-3 rounded border border-slate-700 flex justify-between items-center">
+                            <span>OPA Gatekeeper</span>
+                            <span class="text-xs bg-red-900 text-red-200 px-2 py-1 rounded">Policy</span>
+                        </div>
+                        <div class="bg-slate-800 p-3 rounded border border-slate-700 flex justify-between items-center">
+                            <span>HashiCorp Vault</span>
+                            <span class="text-xs bg-slate-600 text-white px-2 py-1 rounded">Secrets</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="order-2 md:order-1">
+                    <div class="glass-panel rounded-xl p-6 shadow-2xl">
+                        <div class="chart-container h-96">
+                            <canvas id="securityChart"></canvas>
+                        </div>
+                        <p class="text-center text-xs text-slate-500 mt-4">Figure 2: OPA Policy Enforcement (Real-time Block Rates)</p>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold mb-6">Runtime Governance</h2>
+                    <p class="text-slate-300 mb-4 leading-relaxed">
+                        Progenix doesn't just host agents; it jails them. Our <strong>Zero Trust</strong> layer intercepts every tool call.
+                    </p>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-2">&#10003;</span>
+                            <span><strong>Identity:</strong> Every agent has a unique SPIFFE ID via Istio.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-2">&#10003;</span>
+                            <span><strong>Policy:</strong> OPA Rego policies block destructive actions (e.g., DELETE) instantly.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-2">&#10003;</span>
+                            <span><strong>Isolation:</strong> Network Policies prevent lateral movement.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">FinOps & Performance Optimization</h2>
+                <p class="text-slate-400">
+                    Not every question needs an LLM. Our platform intelligently routes queries to the lowest-cost path.
+                </p>
+            </div>
+            
+            <div class="glass-panel rounded-xl p-4 shadow-2xl">
+                <div id="plotlyChart" class="w-full h-[500px]"></div>
+                <p class="text-center text-xs text-slate-500 mt-2">Figure 3: 3D Analysis of Query Cost vs. Latency vs. Complexity</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="bg-gradient-to-r from-blue-900 to-slate-900 rounded-2xl p-8 md:p-12 text-center border border-blue-700/50">
+                <h2 class="text-3xl font-bold text-white mb-6">Ready for Scale?</h2>
+                <p class="text-blue-100 mb-8 max-w-2xl mx-auto">
+                    The Progenix.ai MVP demonstrates that autonomous agents can be safe, cheap, and auditable.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="p-4">
+                        <div class="text-4xl font-bold text-white mb-1">90s</div>
+                        <div class="text-sm text-blue-200">Deploy Time</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-4xl font-bold text-white mb-1">100%</div>
+                        <div class="text-sm text-blue-200">mTLS Encryption</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-4xl font-bold text-white mb-1">Zero</div>
+                        <div class="text-sm text-blue-200">Hardcoded Secrets</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-4xl font-bold text-white mb-1">&lt;1%</div>
+                        <div class="text-sm text-blue-200">Policy Drift</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ********************************************** -->
+        <!-- ******* 2. INVESTOR DEMO GUIDE TEXT ************ -->
+        <!-- ********************************************** -->
+
+        <section class="glass-panel p-8 rounded-xl shadow-2xl guide-content">
+            <h1 class="text-3xl md:text-4xl font-extrabold border-b border-cyan-500 pb-3">Platform Validation Guide: How to Read the Demo</h1>
+            
+            <p>This section provides the critical context and execution roadmap for understanding the data and architectural proof points demonstrated by the Progenix.ai platform.</p>
+
+            <h2>NOTE: About this Architectural Simulator</h2>
+
+            <p>This interactive demo is a **High-Fidelity Simulator**, not a live production system. It is designed to visually demonstrate the platform's core architectural value propositions:</p>
+
+            <ol class="list-decimal list-inside pl-4 text-slate-300 space-y-2">
+                <li><strong>Safety & Governance:</strong> Prove that simple choices in the No-Code UI translate into immediate, immutable **Zero Trust policies** that govern the agent's actions (e.g., stopping a DELETE request).</li>
+                <li><strong>Efficiency & FinOps:</strong> Prove that the platform automatically selects the **cheapest and fastest execution path** (Context Recall, SQL Query) to minimize costly LLM usage.</li>
+                <li><strong>Auditability:</strong> Prove that every agent decision and service call is tracked and logged through industry-standard **Jaeger Traces** and **OPA logs**.</li>
+            </ol>
+            <p class="mt-4">The focus is on validating the platform's **commercial capability**, not the AI's intelligence.</p>
+
+
+            <h2>Part 1: The Agent Creation Studio (The Golden Path)</h2>
+            <p>This section validates that Progenix.ai simplifies platform engineering, turning complex configurations into a "Golden Path" (simple, secure default workflows).</p>
+
+            <table class="min-w-full">
+                <thead>
+                    <tr>
+                        <th>Step Demonstrated</th>
+                        <th>Feature</th>
+                        <th>Platform Capability Proven</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Step 1: Define Agent & Instructions</strong></td>
+                        <td><strong>Persona and Behavioral Governance</strong></td>
+                        <td><strong>Control:</strong> Agents adhere to explicit safety rules (<code>MUST use affirmative sentences</code>). This mitigates brand risk and increases consistency.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Step 3: Add Knowledge Base (RAG)</strong></td>
+                        <td><strong>RAG Data Injection</strong></td>
+                        <td><strong>Configurability:</strong> Users can instantly enrich the agent's knowledge without code by feeding data into the isolated <strong>Vector Database</strong>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Step 4: Define Workflow Logic</strong></td>
+                        <td><strong>Argo Workflow Orchestration</strong></td>
+                        <td><strong>Autonomy:</strong> Proves the platform can execute sequential, conditional business processes (e.g., IF/THEN logic) across multiple microservices.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Step 6: Initiate Deployment</strong></td>
+                        <td><strong>Blueprint Generation</strong></td>
+                        <td><strong>Auditability:</strong> Demonstrates that the No-Code UI translates directly into machine-readable <strong>Infrastructure-as-Code (IaC)</strong>: Kubernetes Deployment, OPA Policy, and Argo Workflow YAMLs.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Part 2: Live Agent Runtime & Validation Matrix</h2>
+            <p>The core of the demonstration happens in the **Order Agent** chat tab, proving security, efficiency, and intelligence under fire.</p>
+
+            <table class="min-w-full">
+                <thead>
+                    <tr>
+                        <th>Feature & Proof</th>
+                        <th>Query to Ask</th>
+                        <th>Expected Agent Behavior & Trace Output</th>
+                        <th>Platform Capability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Zero Trust Policy Enforcement</strong></td>
+                        <td><strong>"Can you delete my order from the database?"</strong></td>
+                        <td><strong>DENIAL:</strong> Agent refuses action. <br> <strong>Audit (OPA Log):</strong> Shows <code>Policy Check FAILED</code> and <code>READ_ONLY_GUARDRAIL</code> violation logged.</td>
+                        <td><strong>Governance:</strong> Guarantees autonomous agents cannot take forbidden actions, proving safety.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Microservice Association</strong></td>
+                        <td><strong>"Where is my order?"</strong></td>
+                        <td><strong>SUCCESS:</strong> Agent returns tracking data. <br> <strong>Trace (Jaeger):</strong> Shows <code>Tool Call (mTLS Service Identity Check)</code> and <code>Data Fetch (Mock DB)</code> spans.</td>
+                        <td><strong>Security/Hosting:</strong> Proves services communicate securely via <strong>Istio mTLS</strong> and the agent runs in an isolated container.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Knowledge Base (RAG) Use</strong></td>
+                        <td><strong>"What is the refund policy?"</strong></td>
+                        <td><strong>SUCCESS:</strong> Agent retrieves policy details (30 days, 10% fee). <br> <strong>Trace (Jaeger):</strong> Shows <code>Context Retrieval (Vector DB Lookup)</code> and <code>Embedding/Reranking</code> spans.</td>
+                        <td><strong>Intelligence:</strong> Proves the agent leverages configured <strong>VectorDB</strong> knowledge over general LLM training data.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Learning Loop / Memory</strong></td>
+                        <td><strong>"Where are the new delivery zones?"</strong> (Ask Twice)</td>
+                        <td><strong>1st Attempt:</strong> Fails, asks for Human-in-the-Loop. <strong>2nd Attempt (after MLOps Update):</strong> Instantly recalls the new zone.</td>
+                        <td><strong>Adaptability:</strong> Proves the platform supports continuous learning and instantaneous <strong>Redis Cache</strong> updates to agent memory.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5. Workflow Orchestration</strong></td>
+                        <td><strong>"Can you follow up on the status of order 54321?"</strong></td>
+                        <td><strong>SUCCESS:</strong> Returns "Workflow Triggered" message. <br> <strong>Trace (Jaeger):</strong> Shows <code>Execute Tool 1</code>, <code>Workflow Decision (Argo Logic)</code>, and <code>Execute Tool 2 (Email Notification)</code>.</td>
+                        <td><strong>Orchestration:</strong> Proves the ability to run multi-step, conditional business logic, going beyond simple Q&A.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6. FinOps/Cost Efficiency (SQL)</strong></td>
+                        <td><strong>"Total orders last 6 months?"</strong></td>
+                        <td><strong>SUCCESS:</strong> Returns the specific count (12,451 orders). <br> <strong>Trace (Jaeger):</strong> Shows minimal <code>LLM Translation (Low-Cost)</code> span, followed by direct <code>GET /analytics</code>.</td>
+                        <td><strong>FinOps:</strong> Proves the agent recognizes deterministic queries and executes a cheaper, faster path, saving money and latency.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>7. Reporting Output</strong></td>
+                        <td><strong>"Generate a sales performance report for last quarter."</strong></td>
+                        <td><strong>SUCCESS:</strong> The agent triggers an automatic file download (<code>.csv</code> or <code>.pptx</code>).</td>
+                        <td><strong>Enterprise Integration:</strong> Proves the agent can generate and deliver structured output files required by business teams.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+    </main>
+
+    <footer class="border-t border-slate-800 py-8 text-center text-slate-600 text-sm">
+        <p>&copy; 2025 Progenix.ai. Proprietary Architecture.</p>
+    </footer>
+
+    <script>
+        // --- CHART 1: The Problem (Radar) ---
+        const ctx1 = document.getElementById('problemChart').getContext('2d');
+        
+        // Label Wrapping Logic (Mandatory)
+        function wrapLabel(label) {
+            if (label.length > 16) {
+                return label.split(' '); 
+            }
+            return label;
+        }
+
+        new Chart(ctx1, {
+            type: 'radar',
+            data: {
+                labels: [
+                    wrapLabel('Security Risks'), 
+                    wrapLabel('Cloud Costs'), 
+                    wrapLabel('Auditability'), 
+                    wrapLabel('Scalability'), 
+                    wrapLabel('Dev Experience')
+                ],
+                datasets: [{
+                    label: 'Standard LLM Wrappers',
+                    data: [90, 85, 20, 30, 40],
+                    fill: true,
+                    backgroundColor: 'rgba(236, 72, 153, 0.2)',
+                    borderColor: '#ec4899',
+                    pointBackgroundColor: '#ec4899',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#ec4899'
+                }, {
+                    label: 'Progenix Platform',
+                    data: [20, 30, 95, 90, 95],
+                    fill: true,
+                    backgroundColor: 'rgba(6, 182, 212, 0.2)',
+                    borderColor: '#06b6d4',
+                    pointBackgroundColor: '#06b6d4',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#06b6d4'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(148, 163, 184, 0.2)' },
+                        grid: { color: 'rgba(148, 163, 184, 0.2)' },
+                        pointLabels: { color: '#94a3b8', font: { size: 12 } },
+                        ticks: { backdropColor: 'transparent', color: 'transparent' }
+                    }
+                },
+                plugins: {
+                    legend: { labels: { color: '#f8fafc' } },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // --- CHART 2: Security/Governance (Stacked Bar) ---
+        const ctx2 = document.getElementById('securityChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Order Agent', 'Finance Bot', 'HR Assistant', 'Support AI'],
+                datasets: [{
+                    label: 'Allowed Requests (Valid)',
+                    data: [1250, 800, 450, 2100],
+                    backgroundColor: '#3b82f6',
+                }, {
+                    label: 'Blocked (Policy Violation)',
+                    data: [15, 45, 2, 80],
+                    backgroundColor: '#ec4899',
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { 
+                        stacked: true,
+                        grid: { color: 'transparent' },
+                        ticks: { color: '#94a3b8' }
+                    },
+                    y: { 
+                        stacked: true, 
+                        grid: { color: 'rgba(148, 163, 184, 0.1)' },
+                        ticks: { color: '#94a3b8' }
+                    }
+                },
+                plugins: {
+                    legend: { labels: { color: '#f8fafc' } },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                return Array.isArray(label) ? label.join(' ') : label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // --- CHART 3: FinOps (Plotly 3D Scatter - WebGL) ---
+        // Data simulation for 3 types of queries
+        const traceSQL = {
+            x: [0.0005, 0.0006, 0.0005, 0.0007, 0.0005], // Low Cost
+            y: [200, 250, 180, 220, 190], // Low Latency
+            z: [1, 1, 2, 1, 1], // Low Complexity
+            mode: 'markers',
+            type: 'scatter3d', // Uses WebGL
+            name: 'SQL Optimized',
+            marker: { size: 5, color: '#10b981', opacity: 0.8 }
+        };
+
+        const traceRAG = {
+            x: [0.002, 0.0025, 0.0022, 0.0028, 0.0021], // Med Cost
+            y: [1200, 1500, 1300, 1600, 1100], // Med Latency
+            z: [5, 6, 5, 7, 5], // Med Complexity
+            mode: 'markers',
+            type: 'scatter3d',
+            name: 'RAG Retrieval',
+            marker: { size: 6, color: '#3b82f6', opacity: 0.8 }
+        };
+
+        const traceReport = {
+            x: [0.005, 0.006, 0.0055, 0.007, 0.0052], // High Cost
+            y: [3500, 4000, 3800, 4200, 3600], // High Latency
+            z: [9, 10, 9, 10, 9], // High Complexity
+            mode: 'markers',
+            type: 'scatter3d',
+            name: 'Complex Reports',
+            marker: { size: 8, color: '#ec4899', opacity: 0.8 }
+        };
+
+        const layout = {
+            margin: { l: 0, r: 0, b: 0, t: 0 },
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            scene: {
+                xaxis: { title: 'Cost ($)', color: '#94a3b8', gridcolor: '#334155' },
+                yaxis: { title: 'Latency (ms)', color: '#94a3b8', gridcolor: '#334155' },
+                zaxis: { title: 'Complexity (1-10)', color: '#94a3b8', gridcolor: '#334155' },
+                bgcolor: 'rgba(0,0,0,0)'
+            },
+            legend: { font: { color: '#f8fafc' } }
+        };
+
+        Plotly.newPlot('plotlyChart', [traceSQL, traceRAG, traceReport], layout, {displayModeBar: false, responsive: true});
+
+    </script>
+</body>
+</html>
